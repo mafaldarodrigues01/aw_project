@@ -1,6 +1,6 @@
 ##Contexto e Declaração do Problema:
-Estamos desenvolvendo uma aplicação para fazer scan de carne e fornecer informações detalhadas sobre preços,
-benefícios nutricionais. Há uma secção dedicada a notícias relacionadas.
+Esta aplicação faz scan de carne e fornecer informações detalhadas sobre preços e
+benefícios nutricionais. Há uma secção dedicada a notícias relacionadas. Com esta aplicação é também possivel selecionar o nosso supermercado mais perto de casa ou supermercado favorito e verificar quais as carnes disponiveis e os seus preços.
 Para garantir eficiência e facilidade de manutenção, é necessãrio evitar a complexidade no sistema em construção.
 
 ##Drivers da Decisão:
