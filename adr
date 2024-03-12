@@ -1,8 +1,11 @@
 ##Contexto e Declaração do Problema:
-Estamos desenvolvendo uma aplicação para escanear carne e fornecer informações detalhadas sobre preços, benefícios nutricionais e notícias relacionadas aos produtos. Para garantir eficiência e facilidade de manutenção, é crucial evitar a complexidade no sistema em construção.
+Estamos desenvolvendo uma aplicação para fazer scan de carne e fornecer informações detalhadas sobre preços,
+benefícios nutricionais. Há uma secção dedicada a notícias relacionadas.
+Para garantir eficiência e facilidade de manutenção, é necessãrio evitar a complexidade no sistema em construção.
 
 ##Drivers da Decisão:
-Dividir o sistema em blocos lógicos e garantir a capacidade de alterar partes específicas sem afetar outras áreas são fatores fundamentais para promover a escalabilidade e a adaptabilidade da aplicação.
+Dividir o sistema em blocos lógicos de modo a garantir a capacidade de alterar partes específicas
+sem afetar o resto do sistema são fatores fundamentais para promover a escalabilidade e a manutenção do sistema.
 
 ##Opções Consideradas:
 
@@ -11,7 +14,9 @@ Components: Dividir o sistema em componentes independentes, cada um responsável
 Workflow: Estruturar o sistema com base em fluxos de trabalho ou processos específicos.
 
 ##Resultado da Decisão:
-Decidimos dividir a aplicação em componentes independentes, pois essa abordagem permite uma modularidade mais granular e coesão entre os diferentes aspectos da aplicação. Cada componente será responsável por uma funcionalidade específica, facilitando a manutenção e o desenvolvimento futuro.
+Decidimos dividir a aplicação em componentes independentes,
+pois esta abordagem permite uma modularidade mais granular e coesão entre os diferentes aspectos da aplicação. 
+Cada componente será responsável por uma funcionalidade específica, facilitando a manutenção e o desenvolvimento futuro.
 
 ##Consequências:
 
