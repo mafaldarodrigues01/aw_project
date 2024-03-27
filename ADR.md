@@ -31,4 +31,8 @@ Requer uma abordagem cuidadosa para garantir que os componentes sejam adequadame
 
 
 ## Mais Informações:
-O sistema será dividido em vários componentes independentes, cada um responsável por uma funcionalidade específica, como escaneamento de carne, processamento de preços, gerenciamento de favoritos e acesso a notícias relacionadas. Essa abordagem proporcionará uma base sólida para o desenvolvimento da aplicação, garantindo sua escalabilidade, manutenção facilitada e adaptabilidade a futuras mudanças no sistema.
+O sistema será dividido em vários componentes independentes,
+cada um responsável por uma funcionalidade específica, como escaneamento de carne, processamento de preços,
+gerenciamento de favoritos e acesso a notícias relacionadas. 
+Essa abordagem proporcionará uma base sólida para o desenvolvimento da aplicação, garantindo sua escalabilidade, 
+manutenção facilitada e adaptabilidade a futuras mudanças no sistema.
