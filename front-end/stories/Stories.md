@@ -1,20 +1,22 @@
 ## Stories and corresponding plots and places
 
-### Story1
-- Plots: Seleciona o ScanButton, Selecionar mais informações, Selecionar ver feedback,Back
-- Places: Home, Scan Overview, ScannedMeatCategory Overview,UsersFeedbackMeat Overview
+### MeatSearch
+- Plots: Selecionar mais informações, Selecionar ver feedback, Back
+- Action: Adicionar aos favoritos
+- Places: Scan Overview, ScannedMeatCategory Overview,UsersFeedbackMeat Overview
+![img.png](img/meatScanStorie.png)
 
-![img_2.png](img/img_2.png)
-
-### Story2
+### MeatScan 
 - Plots: Selecionar o supermercado, Selecionar categoria, Selecionar carne, Selecionar FeedBack,Back
+- Action: Adicionar aos favoritos
 - Places: Home, MeatCategories Overview, SelectedMeatCategory Overview, SelectedMeat Overview,UsersFeedbackMeat Overview 
 
-![img_3.png](img/img_3.png)
+![img_1.png](img/meatSearchStorie.png)
 
-### Story3
+### News
 
-- Plots: Selecionar notícias, Selecionar uma notícia,Back
-- Places: Home, News Overview, SelectedNew Overview 
+- Plots: Selecionar uma notícia, Selecionar ver estatísticas, Back
+- Action: Selecionar estatísticas positivas
+- Places: Home, News Overview, SelectedNew Overview, Statistics Overview
 
-![img_5.png](img/img_5.png)
+![img.png](img/newsStorie.png)
