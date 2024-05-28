@@ -9,7 +9,7 @@ paths:
   /scan/{product_id}:
     get:
       tags:
-        - qrscan
+        - Qrscan
       summary: Scan the meat and retrieve details
       description: Retrieves details of a meat product by scanning its QR code.
       parameters:
@@ -47,7 +47,7 @@ paths:
   /news:
     get:
       tags:
-        - news
+        - News
       summary: Retrieve a list of news articles
       description: Retrieves a list of news articles.
       responses:
@@ -72,7 +72,7 @@ paths:
   /news/{news_id}:
     get:
       tags:
-        - news
+        - News
       summary: Retrieve a specific news article
       description: Retrieves details of a specific news article by its ID.
       parameters:
@@ -110,7 +110,7 @@ paths:
   /login:
     post:
       tags:
-        - authentication
+        - Authentication
       summary: Add new user
       requestBody:
         description: User object to be added
@@ -147,7 +147,7 @@ paths:
   /signup:
     post:
       tags:
-        - authentication
+        - Authentication
       summary: Register a new user
       requestBody:
         description: User object to be added
@@ -247,8 +247,8 @@ paths:
   /product-categories/product/{product_id}:
     get:
       tags:
-        - Product Categories
-      summary: Retrieve product category by product ID
+        - Product
+      summary: Retrieve product by product ID
       parameters:
         - name: product_id
           in: path
@@ -269,13 +269,39 @@ paths:
           $ref: "#/components/schemas/ErrorUnauthorized"
         '404':
           $ref: "#/components/schemas/ErrorNotFound"
-  /user/{userId}:
+
+  /product-categories/product/{product_id}/details:
+    get:
+      tags:
+        - Product
+      summary: Retrieve product by product ID with details
+      parameters:
+        - name: product_id
+          in: path
+          description: ID of the product to retrieve the category for
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Product retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Product"
+        '400':
+          $ref: "#/components/schemas/Error"
+        '401':
+          $ref: "#/components/schemas/ErrorUnauthorized"
+        '404':
+          $ref: "#/components/schemas/ErrorNotFound"
+  /user/{user_id}:
     get:
       tags:
         - User
       summary: Retrieve user by ID
       parameters:
-        - name: userId
+        - name: user_id
           in: path
           description: ID of the user to retrieve
           required: true
@@ -284,6 +310,31 @@ paths:
       responses:
         '200':
           description: User retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        '400':
+          $ref: "#/components/schemas/Error"
+        '401':
+          $ref: "#/components/schemas/ErrorUnauthorized"
+        '404':
+          $ref: "#/components/schemas/ErrorNotFound"
+  /user/{user_id}/picture:
+    put:
+      tags:
+        - User
+      summary: Updates user profile picture
+      parameters:
+        - name: user_id
+          in: path
+          description: ID of the user
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: User updated successfully
           content:
             application/json:
               schema:
@@ -374,7 +425,7 @@ paths:
   /product-categories/product/{product_id}/feedback:
     get:
       tags:
-        - Product Feedback
+        - Feedback
       summary: Retrieve feedback for a specific product
       parameters:
         - name: product_id
@@ -398,7 +449,7 @@ paths:
           $ref: "#/components/schemas/ErrorNotFound"
     post:
       tags:
-        - Product Feedback
+        - Feedback
       summary: Add feedback for a specific product
       parameters:
         - name: product_id
@@ -491,11 +542,11 @@ components:
         email:
           type: string
           description: Email address of the user
-        username: 
-          type: string 
+        username:
+          type: string
           description: Username of the user
-        password: 
-          type: string 
+        password:
+          type: string
           description: Password
     Feedback:
       type: object
@@ -503,11 +554,11 @@ components:
         rating:
           type: integer
           description: Rating given by the user (1-5)
-        comment: 
-          type: string 
+        comment:
+          type: string
           description: Comment provided by the use
-        userId: 
-          type: string 
+        userId:
+          type: string
           description: ID of the user who provided the feedback
     SuccessMessage:
       type: object
